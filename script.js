@@ -40,294 +40,333 @@ document.addEventListener('DOMContentLoaded', function() {
   exclude10.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
   
 
-  exclude1.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude1, 'left');
-    startTop = intStyle(exclude1, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  function addEventListenersfor(exclude){
+    exclude.addEventListener('mousedown', function(e) {
+      startX = e.clientX;
+      startY = e.clientY;
+      startLeft = intStyle(exclude, 'left');
+      startTop = intStyle(exclude, 'top');
+      window.addEventListener('mousemove', watchMove);
+      document.onselectstart = function() {
+          return false;
+      };
+    });
+  
+    exclude.addEventListener('touchstart', function(e) {
+      var touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+      startLeft = intStyle(exclude1, 'left');
+      startTop = intStyle(exclude, 'top');
+      window.addEventListener('touchmove', watchMove, { passive: false });
+      document.onselectstart = function() {
+          return false;
+      };
+      e.preventDefault();
+    });
+  }
 
-  exclude1.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude1, 'left');
-    startTop = intStyle(exclude1, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  addEventListenersfor(exclude1);
+  addEventListenersfor(exclude2);
+  addEventListenersfor(exclude3);
+  addEventListenersfor(exclude4);
+  addEventListenersfor(exclude5);
+  addEventListenersfor(exclude6);
+  addEventListenersfor(exclude7);
+  addEventListenersfor(exclude8);
+  addEventListenersfor(exclude9);
+  addEventListenersfor(exclude10);
+  addEventListenersfor(exclude11);
+  addEventListenersfor(exclude12);
 
-  exclude2.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude2, 'left');
-    startTop = intStyle(exclude2, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude1.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude1, 'left');
+  //   startTop = intStyle(exclude1, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude2.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude2, 'left');
-    startTop = intStyle(exclude2, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude1.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude1, 'left');
+  //   startTop = intStyle(exclude1, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
+
+  // exclude2.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude2, 'left');
+  //   startTop = intStyle(exclude2, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
+
+  // exclude2.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude2, 'left');
+  //   startTop = intStyle(exclude2, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
 
-  exclude3.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude3, 'left');
-    startTop = intStyle(exclude3, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude3.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude3, 'left');
+  //   startTop = intStyle(exclude3, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude3.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude3, 'left');
-    startTop = intStyle(exclude3, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude3.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude3, 'left');
+  //   startTop = intStyle(exclude3, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude4.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude4, 'left');
-    startTop = intStyle(exclude4, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude4.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude4, 'left');
+  //   startTop = intStyle(exclude4, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude4.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude4, 'left');
-    startTop = intStyle(exclude4, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude4.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude4, 'left');
+  //   startTop = intStyle(exclude4, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude5.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude5, 'left');
-    startTop = intStyle(exclude5, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude5.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude5, 'left');
+  //   startTop = intStyle(exclude5, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude5.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude5, 'left');
-    startTop = intStyle(exclude5, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude5.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude5, 'left');
+  //   startTop = intStyle(exclude5, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude6.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude6, 'left');
-    startTop = intStyle(exclude6, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude6.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude6, 'left');
+  //   startTop = intStyle(exclude6, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude6.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude6, 'left');
-    startTop = intStyle(exclude6, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude6.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude6, 'left');
+  //   startTop = intStyle(exclude6, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude7.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude7, 'left');
-    startTop = intStyle(exclude7, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude7.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude7, 'left');
+  //   startTop = intStyle(exclude7, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude7.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude7, 'left');
-    startTop = intStyle(exclude7, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude7.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude7, 'left');
+  //   startTop = intStyle(exclude7, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude8.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude8, 'left');
-    startTop = intStyle(exclude8, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude8.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude8, 'left');
+  //   startTop = intStyle(exclude8, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude8.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude8, 'left');
-    startTop = intStyle(exclude8, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude8.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude8, 'left');
+  //   startTop = intStyle(exclude8, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude9.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude9, 'left');
-    startTop = intStyle(exclude9, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude9.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude9, 'left');
+  //   startTop = intStyle(exclude9, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude9.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude9, 'left');
-    startTop = intStyle(exclude9, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude9.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude9, 'left');
+  //   startTop = intStyle(exclude9, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude10.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude10, 'left');
-    startTop = intStyle(exclude10, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude10.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude10, 'left');
+  //   startTop = intStyle(exclude10, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude10.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude10, 'left');
-    startTop = intStyle(exclude10, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude10.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude10, 'left');
+  //   startTop = intStyle(exclude10, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude11.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude11, 'left');
-    startTop = intStyle(exclude11, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude11.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude11, 'left');
+  //   startTop = intStyle(exclude11, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude11.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude11, 'left');
-    startTop = intStyle(exclude11, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude11.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude11, 'left');
+  //   startTop = intStyle(exclude11, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
-  exclude12.addEventListener('mousedown', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = intStyle(exclude12, 'left');
-    startTop = intStyle(exclude12, 'top');
-    window.addEventListener('mousemove', watchMove);
-    document.onselectstart = function() {
-        return false;
-    };
-  });
+  // exclude12.addEventListener('mousedown', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude12, 'left');
+  //   startTop = intStyle(exclude12, 'top');
+  //   window.addEventListener('mousemove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
 
-  exclude12.addEventListener('touchstart', function(e) {
-    var touch = e.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-    startLeft = intStyle(exclude12, 'left');
-    startTop = intStyle(exclude12, 'top');
-    window.addEventListener('touchmove', watchMove, { passive: false });
-    document.onselectstart = function() {
-        return false;
-    };
-    e.preventDefault();
-  });
+  // exclude12.addEventListener('touchstart', function(e) {
+  //   var touch = e.touches[0];
+  //   startX = touch.clientX;
+  //   startY = touch.clientY;
+  //   startLeft = intStyle(exclude12, 'left');
+  //   startTop = intStyle(exclude12, 'top');
+  //   window.addEventListener('touchmove', watchMove, { passive: false });
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  //   e.preventDefault();
+  // });
 
   window.addEventListener('mouseup', function() {
       window.removeEventListener('mousemove', watchMove);
