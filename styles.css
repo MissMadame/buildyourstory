@@ -31,8 +31,6 @@ span.exclusion-newline:before {
 
 .flex-container {
   display: flex;
-  /* background: #f7f7f7; */
-  /* padding: 10px; */
 }
 
 .flex-item {
@@ -42,17 +40,9 @@ span.exclusion-newline:before {
   line-height: 13pt;
   padding: 10px;
   margin: 5px;
-  width: 100%;
+  width: 25%;
   /* flex: 100%;  */
   /* text-align: center; */
-}
-
-/* Media query for screens that are at least 768px wide (typical breakpoint for tablets and desktops) */
-@media (min-width: 768px) {
-  .flex-item {
-    /* flex: 25%; On desktop, each column takes 25% of the width */
-    width: 25%;
-  }
 }
 
 #exclude1 {
@@ -109,7 +99,7 @@ span.exclusion-newline:before {
   height: 5vw;
   width: 6.5vw;
   left: 44vw;
-  top: -15vh;
+  top: -20vh;
   position: absolute;
   margin: 1em;
   background-image: url('5.svg');
@@ -192,9 +182,47 @@ span.exclusion-newline:before {
   cursor: move;
   height: 9vw;
   width: 9vw;
-  left: 89vw;
+  left: 89.5vw;
   top: -25vh;
   position: absolute;
-  margin: 1em;
+  /* margin: 1em; */
   background-image: url('12.svg');
+}
+
+
+/* Media query for screens that are at least 768px wide (typical breakpoint for tablets and desktops) */
+@media (max-width: 767px) {
+  .flex-item {
+    /* flex: 25%; On desktop, each column takes 25% of the width */
+    width: 100%;
+    padding: 0px;
+  }
+  .flex-container {
+    display: inline;
+  }
+  #topImage {
+    margin-bottom: 5vh;
+  }
+  #exclude2 {
+    top: -12vh
+  }
+  #exclude4 {
+    top: -13vh
+  }
+  #exclude5 {
+    top: -10vh
+  }
+  #exclude6 {
+    top: -14vh
+  }
+  #exclude9 {
+    top: -11vh
+  }
+  #exclude11 {
+    top: -15vh
+  }
+  #exclude12 {
+    top: -9vh;
+    left: 90vw;
+  }
 }
