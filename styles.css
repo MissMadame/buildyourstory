@@ -36,8 +36,8 @@ span.exclusion-newline:before {
 .flex-item {
   /* background: #e1e1e1; */
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 11pt;
-  line-height: 13pt;
+  font-size: 10pt;
+  line-height: 12pt;
   padding: 10px;
   margin: 5px;
   width: 25%;
