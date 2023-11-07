@@ -62,6 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  exclude2.addEventListener('touchstart', function(e) {
+    startX = e.clientX;
+    startY = e.clientY;
+    startLeft = intStyle(exclude2, 'left');
+    startTop = intStyle(exclude2, 'top');
+    window.addEventListener('touchmove', watchMove);
+    document.onselectstart = function() {
+        return false;
+    };
+  });
+
   exclude3.addEventListener('mousedown', function(e) {
     startX = e.clientX;
     startY = e.clientY;
