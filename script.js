@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       exclusion12 = new Exclusion(exclude12, within),
       startX, startY, startLeft, startTop;
 
-  let boolArray = new Array(12).fill(false);
+  // let boolArray = new Array(12).fill(false);
 
   var topImage = document.getElementById("topImage-container");
   exclude1.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
@@ -51,6 +51,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  exclude1.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude1, 'left');
+    startTop = intStyle(exclude1, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
+  });
+
   exclude2.addEventListener('mousedown', function(e) {
     startX = e.clientX;
     startY = e.clientY;
@@ -62,19 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
-  // exclude2.addEventListener('touchstart', function(e) {
-  //   startX = e.clientX;
-  //   startY = e.clientY;
-  //   startLeft = intStyle(exclude2, 'left');
-  //   startTop = intStyle(exclude2, 'top');
-  //   window.addEventListener('touchmove', watchMove);
-  //   document.onselectstart = function() {
-  //       return false;
-  //   };
-  // });
-
   exclude2.addEventListener('touchstart', function(e) {
-    // Get the first touch object
     var touch = e.touches[0];
     startX = touch.clientX;
     startY = touch.clientY;
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.onselectstart = function() {
         return false;
     };
-    e.preventDefault(); // This will prevent scrolling on touch devices
+    e.preventDefault();
   });
 
 
@@ -99,6 +100,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  exclude3.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude3, 'left');
+    startTop = intStyle(exclude3, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
+  });
+
   exclude4.addEventListener('mousedown', function(e) {
     startX = e.clientX;
     startY = e.clientY;
@@ -108,6 +122,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.onselectstart = function() {
         return false;
     };
+  });
+
+  exclude4.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude4, 'left');
+    startTop = intStyle(exclude4, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
   });
 
   exclude5.addEventListener('mousedown', function(e) {
@@ -121,6 +148,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  exclude5.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude5, 'left');
+    startTop = intStyle(exclude5, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
+  });
+
   exclude6.addEventListener('mousedown', function(e) {
     startX = e.clientX;
     startY = e.clientY;
@@ -130,6 +170,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.onselectstart = function() {
         return false;
     };
+  });
+
+  exclude6.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude6, 'left');
+    startTop = intStyle(exclude6, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
   });
 
   exclude7.addEventListener('mousedown', function(e) {
@@ -143,6 +196,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  exclude7.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude7, 'left');
+    startTop = intStyle(exclude7, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
+  });
+
   exclude8.addEventListener('mousedown', function(e) {
     startX = e.clientX;
     startY = e.clientY;
@@ -152,6 +218,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.onselectstart = function() {
         return false;
     };
+  });
+
+  exclude8.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude8, 'left');
+    startTop = intStyle(exclude8, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
   });
 
   exclude9.addEventListener('mousedown', function(e) {
@@ -165,6 +244,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  exclude9.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude9, 'left');
+    startTop = intStyle(exclude9, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
+  });
+
   exclude10.addEventListener('mousedown', function(e) {
     startX = e.clientX;
     startY = e.clientY;
@@ -174,6 +266,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.onselectstart = function() {
         return false;
     };
+  });
+
+  exclude10.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude10, 'left');
+    startTop = intStyle(exclude10, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
   });
 
   exclude11.addEventListener('mousedown', function(e) {
@@ -187,6 +292,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  exclude11.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude11, 'left');
+    startTop = intStyle(exclude11, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
+  });
+
   exclude12.addEventListener('mousedown', function(e) {
     startX = e.clientX;
     startY = e.clientY;
@@ -196,6 +314,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.onselectstart = function() {
         return false;
     };
+  });
+
+  exclude12.addEventListener('touchstart', function(e) {
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    startLeft = intStyle(exclude12, 'left');
+    startTop = intStyle(exclude12, 'top');
+    window.addEventListener('touchmove', watchMove, { passive: false });
+    document.onselectstart = function() {
+        return false;
+    };
+    e.preventDefault();
   });
 
   window.addEventListener('mouseup', function() {
@@ -213,9 +344,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function reflowAll(str) {
     const num = parseInt(str, 10);
 
-    if (num >= 1 && num <= 12) {
-      boolArray[num - 1] = true;
-    }
+    // if (num >= 1 && num <= 12) {
+    //   boolArray[num - 1] = true;
+    // }
 
     // if(boolArray[0]) exclusion1.reflow();
     // if(boolArray[1]) exclusion2.reflow();
