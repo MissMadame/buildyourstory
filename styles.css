@@ -1,0 +1,200 @@
+.body {
+  margin: 0px;
+}
+
+#region {
+  position: relative;
+  width: 100%;
+}
+
+#topImage {
+  margin-top: 5vh;
+  /* height: 50vh;
+  width: auto;
+  max-width: 100vw; */
+  max-width: 98vw; /* Ensure the image does not exceed the width of the viewport */
+  max-height: 50vh; /* Maximum height is 50% of the viewport height */
+  height: auto; /* Maintain aspect ratio */
+  width: auto;
+  margin-bottom: 15vh;
+}
+
+#topImage-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+span.exclusion-newline:before {
+  content: '\A';
+  white-space: pre;
+}
+
+.flex-container {
+  display: flex;
+  /* background: #f7f7f7; */
+  /* padding: 10px; */
+}
+
+.flex-item {
+  /* background: #e1e1e1; */
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 11pt;
+  line-height: 13pt;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  /* flex: 100%;  */
+  /* text-align: center; */
+}
+
+/* Media query for screens that are at least 768px wide (typical breakpoint for tablets and desktops) */
+@media (min-width: 768px) {
+  .flex-item {
+    /* flex: 25%; On desktop, each column takes 25% of the width */
+    width: 25%;
+  }
+}
+
+#exclude1 {
+  /* background: #adf; */
+  cursor: move;
+  height: 6vw;
+  width: 5vw;
+  left: -15px;
+  top: 0px;
+  position: absolute;
+  margin: 1em;
+  background-image: url('1.svg');
+}
+
+#exclude2 {
+  /* background: rgb(8, 64, 101); */
+  cursor: move;
+  height: 10vw;
+  width: 10vw;
+  left: -15px;
+  top: -28vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('2.svg');
+}
+
+#exclude3 {
+  /* background: #ccc; */
+  cursor: move;
+  height: 5vw;
+  width: 5vw;
+  left: 29vw;
+  top: 0px;
+  position: absolute;
+  margin: 1em;
+  background-image: url('3.svg');
+}
+
+#exclude4 {
+  /* background: #a14040; */
+  cursor: move;
+  height: 7vw;
+  width: 13vw;
+  left: 28vw;
+  top: -30vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('4.svg');
+}
+
+#exclude5 {
+  /* background: #9ea140; */
+  cursor: move;
+  height: 5vw;
+  width: 6.5vw;
+  left: 44vw;
+  top: -15vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('5.svg');
+}
+
+#exclude6 {
+  /* background: #40a16d; */
+  cursor: move;
+  height: 7vw;
+  width: 7vw;
+  left: 53vw;
+  top: -33vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('6.svg');
+}
+
+#exclude7 {
+  /* background: #9c40a1; */
+  cursor: move;
+  height: 3.5vw;
+  width: 6vw;
+  left: 56vw;
+  top: -60vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('7.svg');
+}
+
+#exclude8 {
+  /* background: #4640a1; */
+  cursor: move;
+  height: 5vw;
+  width: 5.2vw;
+  left: 62vw;
+  top: 0px;
+  position: absolute;
+  margin: 1em;
+  background-image: url('8.svg');
+}
+
+#exclude9 {
+  /* background: #9ee3c6; */
+  cursor: move;
+  height: 9vw;
+  width: 7vw;
+  left: 67vw;
+  top: -25vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('9.svg');
+}
+
+#exclude10 {
+  /* background: #9eace3; */
+  cursor: move;
+  height: 6vw;
+  width: 8.7vw;
+  left: 78vw;
+  top: 0px;
+  position: absolute;
+  margin: 1em;
+  background-image: url('10.svg');
+}
+
+#exclude11 {
+  /* background: #d4e39e; */
+  cursor: move;
+  height: 7vw;
+  width: 6vw;
+  left: 83vw;
+  top: -40vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('11.svg');
+}
+
+#exclude12 {
+  /* background: #e39e9e; */
+  cursor: move;
+  height: 9vw;
+  width: 9vw;
+  left: 89vw;
+  top: -25vh;
+  position: absolute;
+  margin: 1em;
+  background-image: url('12.svg');
+}
