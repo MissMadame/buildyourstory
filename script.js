@@ -62,16 +62,31 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 
+  // exclude2.addEventListener('touchstart', function(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startLeft = intStyle(exclude2, 'left');
+  //   startTop = intStyle(exclude2, 'top');
+  //   window.addEventListener('touchmove', watchMove);
+  //   document.onselectstart = function() {
+  //       return false;
+  //   };
+  // });
+
   exclude2.addEventListener('touchstart', function(e) {
-    startX = e.clientX;
-    startY = e.clientY;
+    // Get the first touch object
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
     startLeft = intStyle(exclude2, 'left');
     startTop = intStyle(exclude2, 'top');
-    window.addEventListener('touchmove', watchMove);
+    window.addEventListener('touchmove', watchMove, { passive: false });
     document.onselectstart = function() {
         return false;
     };
+    e.preventDefault(); // This will prevent scrolling on touch devices
   });
+
 
   exclude3.addEventListener('mousedown', function(e) {
     startX = e.clientX;
@@ -229,16 +244,43 @@ document.addEventListener('DOMContentLoaded', function() {
     if(num == 12) exclusion12.reflow();
   }
   
+  // function watchMove(e) {
+  //   e.target.style.left = (startLeft + e.clientX - startX) + 'px';
+  //   e.target.style.top = (startTop + e.clientY - startY) + 'px';
+  //   if (e.preventDefault) e.preventDefault();
+  //   e.stopPropagation();
+    
+  //   reflowAll(getNumberFromId(e.target.id));
+
+  //   return false;
+  // }
+
   function watchMove(e) {
-    e.target.style.left = (startLeft + e.clientX - startX) + 'px';
-    e.target.style.top = (startTop + e.clientY - startY) + 'px';
-    if (e.preventDefault) e.preventDefault();
+    var moveX, moveY;
+
+    if (e.type === 'touchmove') {
+        if (e.preventDefault) e.preventDefault();
+        var touch = e.touches[0];
+        moveX = touch.clientX;
+        moveY = touch.clientY;
+    } else {
+        moveX = e.clientX;
+        moveY = e.clientY;
+    }
+
+    var newLeft = startLeft + moveX - startX;
+    var newTop = startTop + moveY - startY;
+
+    e.target.style.left = newLeft + 'px';
+    e.target.style.top = newTop + 'px';
+    
     e.stopPropagation();
     
     reflowAll(getNumberFromId(e.target.id));
 
     return false;
   }
+
   
   function intStyle(element, property) {
       var value = document.defaultView.getComputedStyle(element, null)[property];
