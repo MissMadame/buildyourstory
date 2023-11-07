@@ -191,18 +191,31 @@ document.addEventListener('DOMContentLoaded', function() {
       boolArray[num - 1] = true;
     }
 
-    if(boolArray[0]) exclusion1.reflow();
-    if(boolArray[1]) exclusion2.reflow();
-    if(boolArray[2]) exclusion3.reflow();
-    if(boolArray[3]) exclusion4.reflow();
-    if(boolArray[4]) exclusion5.reflow();
-    if(boolArray[5]) exclusion6.reflow();
-    if(boolArray[6]) exclusion7.reflow();
-    if(boolArray[7]) exclusion8.reflow();
-    if(boolArray[8]) exclusion9.reflow();
-    if(boolArray[9]) exclusion10.reflow();
-    if(boolArray[10]) exclusion11.reflow();
-    if(boolArray[11]) exclusion12.reflow();
+    // if(boolArray[0]) exclusion1.reflow();
+    // if(boolArray[1]) exclusion2.reflow();
+    // if(boolArray[2]) exclusion3.reflow();
+    // if(boolArray[3]) exclusion4.reflow();
+    // if(boolArray[4]) exclusion5.reflow();
+    // if(boolArray[5]) exclusion6.reflow();
+    // if(boolArray[6]) exclusion7.reflow();
+    // if(boolArray[7]) exclusion8.reflow();
+    // if(boolArray[8]) exclusion9.reflow();
+    // if(boolArray[9]) exclusion10.reflow();
+    // if(boolArray[10]) exclusion11.reflow();
+    // if(boolArray[11]) exclusion12.reflow();
+
+    if(num == 1) exclusion1.reflow();
+    if(num == 2) exclusion2.reflow();
+    if(num == 3) exclusion3.reflow();
+    if(num == 4) exclusion4.reflow();
+    if(num == 5) exclusion5.reflow();
+    if(num == 6) exclusion6.reflow();
+    if(num == 7) exclusion7.reflow();
+    if(num == 8) exclusion8.reflow();
+    if(num == 9) exclusion9.reflow();
+    if(num == 10) exclusion10.reflow();
+    if(num == 11) exclusion11.reflow();
+    if(num == 12) exclusion12.reflow();
   }
   
   function watchMove(e) {
