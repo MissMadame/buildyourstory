@@ -1,5 +1,6 @@
 .body {
   margin: 0px;
+  cursor: url('cursor.svg'), auto;
 }
 
 #region {
@@ -85,7 +86,7 @@ span.exclusion-newline:before {
   /* background: #a14040; */
   cursor: move;
   height: 7vw;
-  width: 13vw;
+  width: 13.5vw;
   left: 28vw;
   top: -30vh;
   position: absolute;
@@ -145,7 +146,7 @@ span.exclusion-newline:before {
   /* background: #9ee3c6; */
   cursor: move;
   height: 9vw;
-  width: 7vw;
+  width: 7.5vw;
   left: 67vw;
   top: -25vh;
   position: absolute;
@@ -187,6 +188,14 @@ span.exclusion-newline:before {
   position: absolute;
   /* margin: 1em; */
   background-image: url('12.svg');
+}
+
+/* #exclude1:hover, #exclude2:hover {
+  
+} */
+
+.ex {
+  cursor: url('cursor_hover.svg'), move !important;
 }
 
 
