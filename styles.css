@@ -41,6 +41,7 @@ span.exclusion-newline:before {
   padding: 10px;
   margin: 5px;
   width: 25%;
+  text-align: left;
   /* flex: 100%;  */
   /* text-align: center; */
 }
