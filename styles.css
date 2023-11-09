@@ -1,6 +1,6 @@
 .body {
   margin: 0px;
-  cursor: url('cursor.svg'), auto;
+  cursor: url('cursor.png'), auto;
 }
 
 #region {
@@ -196,7 +196,7 @@ span.exclusion-newline:before {
 } */
 
 .ex {
-  cursor: url('cursor_hover.svg'), move !important;
+  cursor: url('cursor_hover.png'), move !important;
 }
 
 
