@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
   exclude8.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
 
   exclude10.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
+  exclusion7.reflow();
+  exclusion9.reflow();
   
 
   function addEventListenersfor(exclude){

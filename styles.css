@@ -124,8 +124,8 @@ span.exclusion-newline:before {
   cursor: move;
   height: 3.5vw;
   width: 6vw;
-  left: 56vw;
-  top: -60vh;
+  left: 49vw;
+  top: 12vh;
   position: absolute;
   margin: 1em;
   background-image: url('7.svg');
@@ -148,8 +148,8 @@ span.exclusion-newline:before {
   cursor: move;
   height: 9vw;
   width: 7.5vw;
-  left: 67vw;
-  top: -25vh;
+  left: 74vw;
+  top: -11vh;
   position: absolute;
   margin: 1em;
   background-image: url('9.svg');
