@@ -226,10 +226,12 @@ span.exclusion-newline:before {
     top: -14vh
   }
   #exclude7 {
-    top: -20vh
+    top: -21vh;
+    left: 56vw;
   }
   #exclude9 {
-    top: -11vh
+    top: -11vh;
+    left: 67vw;
   }
   #exclude11 {
     top: -15vh

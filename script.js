@@ -39,8 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   exclude10.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
 
-  exclusion7.reflow();
-  exclusion9.reflow();
+  if (window.innerWidth >= 767) {
+    exclusion7.reflow();
+    exclusion9.reflow();
+  }
   
 
   function addEventListenersfor(exclude){
