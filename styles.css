@@ -44,7 +44,7 @@ span.exclusion-newline:before {
 .flex-item {
   
   font-family: 'Acumin Variable Concept', sans-serif;
-  font-weight: 300; Light weight
+  font-weight: 300; /* Light weight */
 
   /* font-family: 'Helvetica', 'Arial', sans-serif; */
   font-size: 10pt;
@@ -217,6 +217,10 @@ span.exclusion-newline:before {
   }
   #topImage {
     margin-bottom: 5vh;
+  }
+  #exclude0 {
+    height: 3vh;
+    width: 3vh;
   }
   #exclude2 {
     top: -12vh
