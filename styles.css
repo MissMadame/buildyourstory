@@ -47,6 +47,17 @@ span.exclusion-newline:before {
   /* text-align: center; */
 }
 
+#exclude0 {
+  cursor: move;
+  height: 2vw;
+  width: 2vw;
+  left: 10vw;
+  top: 0px;
+  position: absolute;
+  margin: 1em;
+  background-image: url('Printing_icon.svg');
+}
+
 #exclude1 {
   /* background: #adf; */
   cursor: move;
@@ -191,9 +202,6 @@ span.exclusion-newline:before {
   background-image: url('12.svg');
 }
 
-/* #exclude1:hover, #exclude2:hover {
-  
-} */
 
 .ex {
   cursor: url('cursor_hover.png'), move !important;
@@ -239,5 +247,13 @@ span.exclusion-newline:before {
   #exclude12 {
     top: -9vh;
     left: 90vw;
+  }
+}
+
+@media print {
+  html, body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      background-image: linear-gradient(#ff685e, #ffffff, #ffffff);
   }
 }

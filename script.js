@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
 
   var exclude1 = document.getElementById('exclude1'),
@@ -13,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       exclude10 = document.getElementById('exclude10'),
       exclude11 = document.getElementById('exclude11'),
       exclude12 = document.getElementById('exclude12'),
+      exclude0 = document.getElementById('exclude0'),
       within = document.getElementById('region'),
       exclusion1 = new Exclusion(exclude1, within),
       exclusion2 = new Exclusion(exclude2, within),
@@ -26,12 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
       exclusion10 = new Exclusion(exclude10, within),
       exclusion11 = new Exclusion(exclude11, within),
       exclusion12 = new Exclusion(exclude12, within),
+      exclusion0 = new Exclusion(exclude0, within),
       startX, startY, startLeft, startTop;
 
   let isDragging = false;
 
   var topImage = document.getElementById("topImage-container");
   exclude1.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
+  exclude0.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
 
   exclude3.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
 
@@ -43,6 +46,42 @@ document.addEventListener('DOMContentLoaded', function() {
     exclusion7.reflow();
     exclusion9.reflow();
   }
+
+
+  window.onbeforeprint = function() {
+    let readjustment = 40;
+
+    exclude1.style.top = (parseInt(exclude1.style.top, 10) + readjustment) + 'px';
+    exclude2.style.top = (parseInt(exclude2.style.top, 10) + readjustment) + 'px';
+    exclude3.style.top = (parseInt(exclude3.style.top, 10) + readjustment) + 'px';
+    exclude4.style.top = (parseInt(exclude4.style.top, 10) + readjustment) + 'px';
+    exclude5.style.top = (parseInt(exclude5.style.top, 10) + readjustment) + 'px';
+    exclude6.style.top = (parseInt(exclude6.style.top, 10) + readjustment) + 'px';
+    exclude7.style.top = (parseInt(exclude7.style.top, 10) + readjustment) + 'px';
+    exclude8.style.top = (parseInt(exclude8.style.top, 10) + readjustment) + 'px';
+    exclude9.style.top = (parseInt(exclude9.style.top, 10) + readjustment) + 'px';
+    exclude10.style.top = (parseInt(exclude10.style.top, 10) + readjustment) + 'px';
+    exclude11.style.top = (parseInt(exclude11.style.top, 10) + readjustment) + 'px';
+    exclude12.style.top = (parseInt(exclude12.style.top, 10) + readjustment) + 'px';
+
+  };
+  window.onafterprint = function(){
+    let readjustment = 40;
+
+    exclude1.style.top = (parseInt(exclude1.style.top, 10) - readjustment) + 'px';
+    exclude2.style.top = (parseInt(exclude2.style.top, 10) - readjustment) + 'px';
+    exclude3.style.top = (parseInt(exclude3.style.top, 10) - readjustment) + 'px';
+    exclude4.style.top = (parseInt(exclude4.style.top, 10) - readjustment) + 'px';
+    exclude5.style.top = (parseInt(exclude5.style.top, 10) - readjustment) + 'px';
+    exclude6.style.top = (parseInt(exclude6.style.top, 10) - readjustment) + 'px';
+    exclude7.style.top = (parseInt(exclude7.style.top, 10) - readjustment) + 'px';
+    exclude8.style.top = (parseInt(exclude8.style.top, 10) - readjustment) + 'px';
+    exclude9.style.top = (parseInt(exclude9.style.top, 10) - readjustment) + 'px';
+    exclude10.style.top = (parseInt(exclude10.style.top, 10) - readjustment) + 'px';
+    exclude11.style.top = (parseInt(exclude11.style.top, 10) - readjustment) + 'px';
+    exclude12.style.top = (parseInt(exclude12.style.top, 10) - readjustment) + 'px';
+
+  };
   
 
   function addEventListenersfor(exclude){
@@ -83,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
   addEventListenersfor(exclude10);
   addEventListenersfor(exclude11);
   addEventListenersfor(exclude12);
+  addEventListenersfor(exclude12);
+  addEventListenersfor(exclude0);
 
 
   window.addEventListener('mouseup', function() {
@@ -100,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function reflowAll(str) {
     const num = parseInt(str, 10);
 
+    if(num == 0) exclusion0.reflow();
     if(num == 1) exclusion1.reflow();
     if(num == 2) exclusion2.reflow();
     if(num == 3) exclusion3.reflow();
