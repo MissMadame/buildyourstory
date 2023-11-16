@@ -215,15 +215,29 @@ span.exclusion-newline:before {
   .flex-container {
     display: inline;
   }
-  #topImage {
+  /* #topImage {
     margin-bottom: 5vh;
-  }
+  } */
   #exclude0 {
     height: 3vh;
     width: 3vh;
+    left: 12vw
+  }
+  #exclude1 {
+    height: 14.4vw; /* Was 6vw */
+    width: 12vw; /* Was 5vw */
+    left: -14px
   }
   #exclude2 {
-    top: -12vh
+    top: -15vh;
+    left: 0px;
+    height: 18vw; /* Was 10vw */
+    width: 18vw; /* Was 10vw */
+  }
+  #exclude3 {
+    height: 10vw; /* Was 5vw */
+    width: 10vw; /* Was 5vw */
+    left: 26vw;
   }
   #exclude4 {
     top: -13vh
@@ -235,8 +249,10 @@ span.exclusion-newline:before {
     top: -14vh
   }
   #exclude7 {
-    top: -21vh;
-    left: 56vw;
+    top: -34.5vh;
+    left: 40vw;
+    height: 10.15vw; /* Was 3.5vw */
+    width: 17.4vw; /* Was 6vw */
   }
   #exclude9 {
     top: -11vh;
