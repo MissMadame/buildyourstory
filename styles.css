@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Acumin Variable Concept';
+  src: url('AcuminVariableConcept.otf') format('opentype');
+  font-weight: 300;
+  font-stretch: semi-condensed;
+}
+
 .body {
   margin: 0px;
   cursor: url('cursor.png'), auto;
@@ -35,16 +42,17 @@ span.exclusion-newline:before {
 }
 
 .flex-item {
-  /* background: #e1e1e1; */
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  
+  font-family: 'Acumin Variable Concept', sans-serif;
+  font-weight: 300; Light weight
+
+  /* font-family: 'Helvetica', 'Arial', sans-serif; */
   font-size: 10pt;
   line-height: 12pt;
   padding: 10px;
   margin: 5px;
   width: 25%;
   text-align: left;
-  /* flex: 100%;  */
-  /* text-align: center; */
 }
 
 #exclude0 {
