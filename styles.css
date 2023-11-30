@@ -93,7 +93,7 @@ span.exclusion-newline:before {
   height: 2vw;
   width: 2vw;
   left: 10vw;
-  top: 0px;
+  top: -70vh;
   background-image: url('Printing_icon.svg');
 }
 
