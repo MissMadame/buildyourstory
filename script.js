@@ -95,11 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var randomWeight = fontWeights[Math.floor(Math.random() * fontWeights.length)];
     var randomStretch = fontStretches[Math.floor(Math.random() * fontStretches.length)];
     var randomStyle = fontStyles[Math.floor(Math.random() * fontStyles.length)];
+    var randomWidth = 50 + Math.floor(Math.random() * 60);åå
 
     flexItems.forEach(function(item){
-      item.style.fontWeight = randomWeight;
-      item.style.fontStretch = randomStretch;
-      item.style.fontStyle = randomStyle;
+      // item.style.fontWeight = randomWeight;
+      // item.style.fontStretch = randomStretch;
+      // item.style.fontStyle = randomStyle;
+      item.style.fontVariationSettings = "\"wght\" " + randomWeight + ", \"wdth\" " + randomWidth;
     });
   })
 
