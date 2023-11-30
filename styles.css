@@ -69,7 +69,7 @@ span.exclusion-newline:before {
   height: 2vw;
   width: 2vw;
   left: 45vw;
-  top: -65vh;
+  top: 0px;
   background-image: url('font_weight.svg');
 }
 
