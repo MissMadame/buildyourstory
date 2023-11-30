@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Acumin Variable Concept';
-  src: url('AcuminVariableConcept.otf') format('opentype');
+  src: url('AcuminVariableConcept.otf') format('truetype-variations');
   font-weight: 300;
   font-stretch: semi-condensed;
   font-style: normal;
