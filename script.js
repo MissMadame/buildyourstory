@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   exclude[10].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
 
+  exclude[13].style.top = "-"+(topImage.getBoundingClientRect().height - 15)+'px';
+
   exclude[14].style.top = "-"+(topImage.getBoundingClientRect().height)+'px';
 
   if (window.innerWidth >= 767) {

@@ -61,7 +61,7 @@ span.exclusion-newline:before {
   height: 2vw;
   width: 2vw;
   left: 35vw;
-  top: -58vh;
+  top: 0vh;
   background-image: url('background_button.svg');
 }
 
