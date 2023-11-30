@@ -1,86 +1,95 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  var exclude1 = document.getElementById('exclude1'),
-      exclude2 = document.getElementById('exclude2'),
-      exclude3 = document.getElementById('exclude3'),
-      exclude4 = document.getElementById('exclude4'),
-      exclude5 = document.getElementById('exclude5'),
-      exclude6 = document.getElementById('exclude6'),
-      exclude7 = document.getElementById('exclude7'),
-      exclude8 = document.getElementById('exclude8'),
-      exclude9 = document.getElementById('exclude9'),
-      exclude10 = document.getElementById('exclude10'),
-      exclude11 = document.getElementById('exclude11'),
-      exclude12 = document.getElementById('exclude12'),
-      exclude0 = document.getElementById('exclude0'),
-      within = document.getElementById('region'),
-      exclusion1 = new Exclusion(exclude1, within),
-      exclusion2 = new Exclusion(exclude2, within),
-      exclusion3 = new Exclusion(exclude3, within),
-      exclusion4 = new Exclusion(exclude4, within),
-      exclusion5 = new Exclusion(exclude5, within),
-      exclusion6 = new Exclusion(exclude6, within),
-      exclusion7 = new Exclusion(exclude7, within),
-      exclusion8 = new Exclusion(exclude8, within),
-      exclusion9 = new Exclusion(exclude9, within),
-      exclusion10 = new Exclusion(exclude10, within),
-      exclusion11 = new Exclusion(exclude11, within),
-      exclusion12 = new Exclusion(exclude12, within),
-      exclusion0 = new Exclusion(exclude0, within),
-      startX, startY, startLeft, startTop;
+  var exclude = {};
+  var exclusion = {};
+  var within = document.getElementById('region');
+  var startX, startY, startLeft, startTop;
+  var totalExclusions = 16; 
 
-  let isDragging = false;
-
-  var topImage = document.getElementById("topImage-container");
-  exclude1.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
-
-  exclude0.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
-
-  exclude3.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
-
-  exclude8.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
-
-  exclude10.style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
-
-  if (window.innerWidth >= 767) {
-    exclusion7.reflow();
-    exclusion9.reflow();
+  for (var i = 0; i <= totalExclusions; i++) {
+      var excludeElement = document.getElementById('exclude' + i);
+      if (excludeElement) {
+          exclude[i] = excludeElement;
+          exclusion[i] = new Exclusion(excludeElement, within);
+      }
   }
 
 
+  var topImage = document.getElementById("topImage-container");
+  exclude[1].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
+  exclude[0].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
+  exclude[3].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
+  exclude[8].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
+  exclude[10].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
+  if (window.innerWidth >= 767) {
+    exclusion[7].reflow();
+    exclusion[9].reflow();
+  }
+
+
+  var gradients = [
+    'linear-gradient(#ff685e, #f48f9e, #ffffff,#ffffff,#ffffff)',
+    'linear-gradient(#ffffff,#ffffff,#fffcd5,#00aeef,#00ff00)',
+    'linear-gradient(#ffffff,#ffffff,#fff2005,#a4ff00,#a4ff00)',
+    'linear-gradient(#ffff5e,#f48f9e,#ffffff,#ffffff,#ffffff)',
+    'linear-gradient(#000000, #414042, #ffffff,#ffffff,#80ff00)',
+    'linear-gradient(#000000, #414042, #ffffff,#ffffff,#80ff00)',
+    'linear-gradient(#f27fb2, #d296c3, #ffe0ac,#ffffff,#ffffff)',
+    'linear-gradient(#ed1c24, #ed1c24, #b9e5fb,#ffffff,#ffffff)',
+    'linear-gradient(#000000, #000000, #ffffff,#f8c1d9,#f8c1d9)',
+    'linear-gradient(#fab6a4, #ff6e79, #fff9b8,#ffffff,#ffff00)'
+  ];
+
+  var currentGradientIndex = 0;
+  var backgroundColor = exclude[13];
+  backgroundColor.addEventListener('click', function() {
+      currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
+      document.body.style.backgroundImage = gradients[currentGradientIndex];
+  });
+
+  
+
+
+  var flexItems = document.querySelectorAll('.flex-item');
+  var minFontSize = 5;
+  var maxFontSize = 20;
+
+  var fontSmaller = exclude[15];
+  fontSmaller.addEventListener('click', function(){
+    flexItems.forEach(function(item) {
+      var currentSize = parseInt(window.getComputedStyle(item).fontSize);
+      var newSize = Math.max(currentSize - 1, minFontSize);
+      item.style.fontSize = newSize+ 'px';
+    });
+  });
+
+  var fontBigger = exclude[16];
+  fontBigger.addEventListener('click', function() {
+    flexItems.forEach(function(item) {
+        var currentSize = parseInt(window.getComputedStyle(item).fontSize);
+        var newSize = Math.min(currentSize + 1, maxFontSize);
+        item.style.fontSize = newSize + 'px';
+    });
+  });
+
+
+
+  let readjustment = 40;
+
   window.onbeforeprint = function() {
-    let readjustment = 40;
-
-    exclude1.style.top = (parseInt(exclude1.style.top, 10) + readjustment) + 'px';
-    exclude2.style.top = (parseInt(exclude2.style.top, 10) + readjustment) + 'px';
-    exclude3.style.top = (parseInt(exclude3.style.top, 10) + readjustment) + 'px';
-    exclude4.style.top = (parseInt(exclude4.style.top, 10) + readjustment) + 'px';
-    exclude5.style.top = (parseInt(exclude5.style.top, 10) + readjustment) + 'px';
-    exclude6.style.top = (parseInt(exclude6.style.top, 10) + readjustment) + 'px';
-    exclude7.style.top = (parseInt(exclude7.style.top, 10) + readjustment) + 'px';
-    exclude8.style.top = (parseInt(exclude8.style.top, 10) + readjustment) + 'px';
-    exclude9.style.top = (parseInt(exclude9.style.top, 10) + readjustment) + 'px';
-    exclude10.style.top = (parseInt(exclude10.style.top, 10) + readjustment) + 'px';
-    exclude11.style.top = (parseInt(exclude11.style.top, 10) + readjustment) + 'px';
-    exclude12.style.top = (parseInt(exclude12.style.top, 10) + readjustment) + 'px';
-
+    for (var i = 0; i <= totalExclusions; i++) {
+      exclude[i].style.top = (parseInt(exclude[i].style.top, 10) + readjustment) + 'px';
+    }
   };
   window.onafterprint = function(){
-    let readjustment = 40;
-
-    exclude1.style.top = (parseInt(exclude1.style.top, 10) - readjustment) + 'px';
-    exclude2.style.top = (parseInt(exclude2.style.top, 10) - readjustment) + 'px';
-    exclude3.style.top = (parseInt(exclude3.style.top, 10) - readjustment) + 'px';
-    exclude4.style.top = (parseInt(exclude4.style.top, 10) - readjustment) + 'px';
-    exclude5.style.top = (parseInt(exclude5.style.top, 10) - readjustment) + 'px';
-    exclude6.style.top = (parseInt(exclude6.style.top, 10) - readjustment) + 'px';
-    exclude7.style.top = (parseInt(exclude7.style.top, 10) - readjustment) + 'px';
-    exclude8.style.top = (parseInt(exclude8.style.top, 10) - readjustment) + 'px';
-    exclude9.style.top = (parseInt(exclude9.style.top, 10) - readjustment) + 'px';
-    exclude10.style.top = (parseInt(exclude10.style.top, 10) - readjustment) + 'px';
-    exclude11.style.top = (parseInt(exclude11.style.top, 10) - readjustment) + 'px';
-    exclude12.style.top = (parseInt(exclude12.style.top, 10) - readjustment) + 'px';
-
+    for (var i = 0; i <= totalExclusions; i++) {
+      exclude[i].style.top = (parseInt(exclude[i].style.top, 10) - readjustment) + 'px';
+    }
   };
   
 
@@ -110,20 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  addEventListenersfor(exclude1);
-  addEventListenersfor(exclude2);
-  addEventListenersfor(exclude3);
-  addEventListenersfor(exclude4);
-  addEventListenersfor(exclude5);
-  addEventListenersfor(exclude6);
-  addEventListenersfor(exclude7);
-  addEventListenersfor(exclude8);
-  addEventListenersfor(exclude9);
-  addEventListenersfor(exclude10);
-  addEventListenersfor(exclude11);
-  addEventListenersfor(exclude12);
-  addEventListenersfor(exclude12);
-  addEventListenersfor(exclude0);
+  for (var i = 0; i <= totalExclusions; i++) {
+    addEventListenersfor(exclude[i])
+  }
 
 
   window.addEventListener('mouseup', function() {
@@ -138,23 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
     return match ? match[1] : null;
   }
 
-  function reflowAll(str) {
-    const num = parseInt(str, 10);
-
-    if(num == 0) exclusion0.reflow();
-    if(num == 1) exclusion1.reflow();
-    if(num == 2) exclusion2.reflow();
-    if(num == 3) exclusion3.reflow();
-    if(num == 4) exclusion4.reflow();
-    if(num == 5) exclusion5.reflow();
-    if(num == 6) exclusion6.reflow();
-    if(num == 7) exclusion7.reflow();
-    if(num == 8) exclusion8.reflow();
-    if(num == 9) exclusion9.reflow();
-    if(num == 10) exclusion10.reflow();
-    if(num == 11) exclusion11.reflow();
-    if(num == 12) exclusion12.reflow();
-  }
 
   function watchMove(e) {
     var moveX, moveY;
@@ -177,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     e.stopPropagation();
     
-    reflowAll(getNumberFromId(e.target.id));
+    exclusion[parseInt(getNumberFromId(e.target.id), 10)].reflow();
 
     return false;
   }

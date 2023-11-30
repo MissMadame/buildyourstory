@@ -8,6 +8,7 @@
 .body {
   margin: 0px;
   cursor: url('cursor.png'), auto;
+  background-image: linear-gradient(#ff685e, #f48f9e, #ffffff,#ffffff,#ffffff);
 }
 
 #region {
@@ -55,155 +56,152 @@ span.exclusion-newline:before {
   text-align: left;
 }
 
+#exclude13 {
+  height: 2vw;
+  width: 2vw;
+  left: 35vw;
+  top: -60vh;
+  background-image: url('background_button.svg');
+}
+
+#exclude14 {
+  height: 2vw;
+  width: 2vw;
+  left: 45vw;
+  top: -65vh;
+  background-image: url('font_weight.svg');
+}
+
+#exclude15 {
+  height: 2vw;
+  width: 2vw;
+  left: 83vw;
+  top: -20vh;
+  background-image: url('font_small.svg');
+}
+
+#exclude16 {
+  height: 2vw;
+  width: 2vw;
+  left: 80vw;
+  top: -25vh;
+  background-image: url('font_big.svg');
+}
+
 #exclude0 {
-  cursor: move;
   height: 2vw;
   width: 2vw;
   left: 10vw;
   top: 0px;
-  position: absolute;
-  margin: 1em;
   background-image: url('Printing_icon.svg');
 }
 
 #exclude1 {
-  cursor: move;
   height: 6.6vw; /* Was 6vw */
   width: 5.5vw; /* Was 5vw */
   left: -15px;
   top: 0px;
-  position: absolute;
-  margin: 1em;
   background-image: url('1.svg');
 }
 
 #exclude2 {
-  cursor: move;
   height: 11vw; /* Was 10vw */
   width: 11vw; /* Was 10vw */
   left: -15px;
   top: -28vh;
-  position: absolute;
-  margin: 1em;
   background-image: url('2.svg');
 }
 
 #exclude3 {
-  cursor: move;
   height: 5.5vw; /* Was 5vw */
   width: 5.5vw; /* Was 5vw */
   left: 29vw;
   top: 0px;
-  position: absolute;
-  margin: 1em;
   background-image: url('3.svg');
 }
 
 #exclude4 {
-  cursor: move;
   height: 7.7vw; /* Was 7vw */
   width: 14.85vw; /* Was 13.5vw */
   left: 28vw;
   top: -30vh;
-  position: absolute;
-  margin: 1em;
   background-image: url('4.svg');
 }
 
 #exclude5 {
-  cursor: move;
   height: 5.5vw; /* Was 5vw */
   width: 7.15vw; /* Was 6.5vw */
   left: 44vw;
   top: -20vh;
-  position: absolute;
-  margin: 1em;
   background-image: url('5.svg');
 }
 
 #exclude6 {
-  cursor: move;
   height: 7.7vw; /* Was 7vw */
   width: 7.7vw; /* Was 7vw */
   left: 53vw;
   top: -33vh;
-  position: absolute;
-  margin: 1em;
   background-image: url('6.svg');
 }
 
 #exclude7 {
-  cursor: move;
   height: 3.85vw; /* Was 3.5vw */
   width: 6.6vw; /* Was 6vw */
   left: 49vw;
   top: 12vh;
-  position: absolute;
-  margin: 1em;
   background-image: url('7.svg');
 }
 
 #exclude8 {
-  cursor: move;
   height: 5.5vw; /* Was 5vw */
   width: 5.72vw; /* Was 5.2vw */
   left: 62vw;
   top: 0px;
-  position: absolute;
-  margin: 1em;
   background-image: url('8.svg');
 }
 
 #exclude9 {
-  cursor: move;
   height: 9.9vw; /* Was 9vw */
   width: 8.25vw; /* Was 7.5vw */
   left: 74vw;
   top: -11vh;
-  position: absolute;
-  margin: 1em;
   background-image: url('9.svg');
 }
 
 #exclude10 {
-  cursor: move;
   height: 6.6vw; /* Was 6vw */
   width: 9.57vw; /* Was 8.7vw */
   left: 78vw;
   top: 0px;
-  position: absolute;
-  margin: 1em;
   background-image: url('10.svg');
 }
 
 #exclude11 {
-  cursor: move;
   height: 7.7vw; /* Was 7vw */
   width: 6.6vw; /* Was 6vw */
   left: 83vw;
   top: -40vh;
-  position: absolute;
-  margin: 1em;
   background-image: url('11.svg');
 }
 
-#exclude12 {
-  cursor: move;
-  height: 9.9vw; /* Was 9vw */
-  width: 9.9vw; /* Was 9vw */
-  left: 89.5vw;
-  top: -25vh;
-  position: absolute;
-  /* margin: 1em; */
-  background-image: url('12.svg');
-}
 
 
 
 .ex {
+  cursor: move;
+  position: absolute;
+  margin: 1em;
   cursor: url('cursor_hover.png'), move !important;
 }
 
+#exclude12 {
+  height: 9.9vw; /* Was 9vw */
+  width: 9.9vw; /* Was 9vw */
+  left: 88vw;
+  top: -25vh;
+  margin: 0em;
+  background-image: url('12.svg');
+}
 
 /* Media query for screens that are at least 768px wide (typical breakpoint for tablets and desktops) */
 @media (max-width: 767px) {
@@ -218,10 +216,18 @@ span.exclusion-newline:before {
   /* #topImage {
     margin-bottom: 5vh;
   } */
-  #exclude0 {
+  #exclude0, #exclude13, #exclude14, #exclude15, #exclude16{
     height: 3vh;
     width: 3vh;
+  }
+  #exclude0{
     left: 12vw
+  }
+  #exclude13{
+    top: -25vh
+  }
+  #exclude14{
+    top: -30vh
   }
   #exclude1 {
     height: 14.4vw; /* Was 6vw */
