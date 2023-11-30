@@ -36,12 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
     'linear-gradient(#ff685e, #f48f9e, #ffffff,#ffffff,#ffffff)',
     'linear-gradient(#ffffff,#ffffff,#fffcd5,#00aeef,#00ff00)',
     'linear-gradient(#ffffff,#fff2005,#fff2005,#a4ff00,#a4ff00)',
-    'linear-gradient(#00aeef, #f48f9e, #ffff5e,#ffffff,#00aeef)',
-    'linear-gradient(#000000, #414042, #ffffff,#ffffff,#80ff00)',
+    'linear-gradient(#00aeef, #ffff5e, #ffff5e,#ffffff,#00aeef)',
+    'linear-gradient(#000000, #414042, #ffffff,#80ff00,#80ff00)',
     'linear-gradient(#f27fb2, #d296c3, #d296c3,#ffe0ac,#ffe0ac)',
     'linear-gradient(#f27fb2, #d296c3, #ffe0ac,#ffffff,#ffffff)',
     'linear-gradient(#ed1c24, #ed1c24, #b9e5fb,#ffffff,#ffffff)',
-    'linear-gradient(#ed1c24, #000000, #000000,#f8c1d9,#f8c1d9)',
     'linear-gradient(#fab6a4, #ff6e79, #fff9b8,#fff9b8,#ffff00)'
   ];
 
