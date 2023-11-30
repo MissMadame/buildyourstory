@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var topImage = document.getElementById("topImage-container");
   exclude[1].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
 
+  exclude[0].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
+
   exclude[3].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
 
   exclude[8].style.top = "-"+(topImage.getBoundingClientRect().height + 15)+'px';
