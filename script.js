@@ -77,6 +77,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  var fontStyle = exclude[14];
+  var fontWeights = ['100', '200', '300', '400', '500', '600', '700', '800', '900'];
+  var fontStretches = [
+    'normal', 
+    'semi-condensed', 
+    'condensed', 
+    'extra-condensed',
+    'expanded',
+  ];
+  var fontStyles = ['normal', 'normal', 'normal', 'italic', 'oblique'];
+
+  fontStyle.addEventListener('click', function(){
+    var randomWeight = fontWeights[Math.floor(Math.random() * fontWeights.length)];
+    var randomStretch = fontStretches[Math.floor(Math.random() * fontStretches.length)];
+    var randomStyle = fontStyles[Math.floor(Math.random() * fontStyles.length)];
+
+    flexItems.forEach(function(item){
+      item.style.fontWeight = randomWeight;
+      item.style.fontStretch = randomStretch;
+      item.style.fontStyle = randomStyle;
+    });
+  })
+
 
 
   let readjustment = 40;

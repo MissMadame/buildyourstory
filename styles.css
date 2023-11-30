@@ -3,6 +3,7 @@
   src: url('AcuminVariableConcept.otf') format('opentype');
   font-weight: 300;
   font-stretch: semi-condensed;
+  font-style: normal;
 }
 
 .body {
